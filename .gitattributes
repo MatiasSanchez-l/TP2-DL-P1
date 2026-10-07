@@ -1,2 +1,35 @@
-# Auto detect text files and perform LF normalization
+# Normalizacion automatica de finales de linea
 * text=auto
+
+# Codigo
+*.cs text diff=csharp
+*.shader text
+*.json text
+*.md text
+
+# Archivos YAML de Unity (siempre LF, merge con UnityYAMLMerge si esta configurado)
+*.unity text merge=unityyamlmerge eol=lf
+*.prefab text merge=unityyamlmerge eol=lf
+*.asset text merge=unityyamlmerge eol=lf
+*.mat text merge=unityyamlmerge eol=lf
+*.anim text merge=unityyamlmerge eol=lf
+*.controller text merge=unityyamlmerge eol=lf
+*.physicMaterial text merge=unityyamlmerge eol=lf
+*.meta text eol=lf
+
+# Binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.psd binary
+*.tga binary
+*.gif binary
+*.fbx binary
+*.FBX binary
+*.obj binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.ttf binary
+*.otf binary
+*.dll binary
