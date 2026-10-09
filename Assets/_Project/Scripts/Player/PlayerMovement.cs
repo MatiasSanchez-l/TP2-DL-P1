@@ -14,8 +14,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector2 direction = moveAction.ReadValue<Vector2>();
+        Vector2 input = moveAction.ReadValue<Vector2>();
 
-        transform.position += (Vector3)direction * speed * Time.deltaTime;
+        Vector2 direction = input.y * new Vector2(1, 0.5f) + input.x * new Vector2(1, -0.5f);
+
+        transform.position += (Vector3)direction.normalized * speed * Time.deltaTime;
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b5546c34ef6c140489245e713c772821
+guid: 68999e2461774c141a476ddbb74f2050
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2852096212311475435
-    second: city00_0
+      213: 5773284709551458990
+    second: capa_veredas_edificios_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: city00_0
+      name: capa_veredas_edificios_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4800
-        height: 4080
+        x: 227
+        y: 131
+        width: 2635
+        height: 1404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51bffef1b915b68d0800000000000000
-      internalID: -2852096212311475435
+      spriteID: eaa420cead3de1050800000000000000
+      internalID: 5773284709551458990
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      city00_0: -2852096212311475435
+      capa_veredas_edificios_0: 5773284709551458990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
