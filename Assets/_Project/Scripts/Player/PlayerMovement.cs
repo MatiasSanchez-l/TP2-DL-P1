@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (VentanaMinijuego.EstaAbierta) return;
+
         Vector2 input = moveAction.ReadValue<Vector2>();
 
         Vector2 direction = input.y * new Vector2(1, 0.45f) + input.x * new Vector2(1, -0.45f);
