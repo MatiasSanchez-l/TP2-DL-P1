@@ -12,7 +12,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HandController : MonoBehaviour
+public class HandController : Minijuego
 {
     [SerializeField] private Camera cam;
 
@@ -38,7 +38,7 @@ public class HandController : MonoBehaviour
 
     private void Awake()
     {
-        if(cam == null) cam = Camera.main;
+        if(cam == null) cam = BuscarCamaraDeLaEscena();
 
         fullScale = barFill.localScale;
         UpdateBar();
@@ -118,7 +118,18 @@ public class HandController : MonoBehaviour
         {
             completed = true;
             Debug.Log("Barra Llena");
+            Invoke(nameof(Ganar), 0.5f);
         }
+    }
+
+    private Camera BuscarCamaraDeLaEscena()
+    {
+        foreach(GameObject raiz in gameObject.scene.GetRootGameObjects())
+        {
+            Camera c = raiz.GetComponentInChildren<Camera>();
+            if(c != null) return c;
+        }
+        return Camera.main;
     }
 
     private Vector3 GetMouseWorld(Mouse mouse)

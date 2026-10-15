@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9136410303090156278}
   - component: {fileID: 3251070275847023584}
+  - component: {fileID: 4815162342108160815}
   m_Layer: 0
   m_Name: Interactuable
   m_TagString: Untagged
@@ -363,3 +364,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4815162342108160815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127281947954251875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97632932b48843ccac2205ad4100f02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloInteractuable
+  color: {r: 1, g: 0.85, b: 0.3, a: 1}
+  tamanoHalo: 1.5
+  velocidadLatido: 2.5
+  cantidadDestellos: 4
+  ordenCapa: 5

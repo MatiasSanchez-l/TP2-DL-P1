@@ -36,6 +36,8 @@ public class Interactuable : MonoBehaviour
     private InputAction interactAction;
     private bool completado;
 
+    public bool Completado => completado;
+
     private void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
