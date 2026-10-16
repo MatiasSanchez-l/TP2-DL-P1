@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/Menus/MenuPrincipal/MainMenu.unity
+    path: Assets/_Project/Scenes/Menus/MainMenu.unity
     guid: 9cee62f657e5b27488ef79e0bdf7a393
   - enabled: 1
-    path: Assets/_Project/Scenes/City.unity
+    path: Assets/_Project/Scenes/Gameplay/City.unity
     guid: 550c428dd4fb9c9e2cb4f6aa2067af8d
   - enabled: 1
-    path: Assets/_Project/Scenes/Minijuegos/Minijuego1.unity
+    path: Assets/_Project/Scenes/Minigames/Minijuego1.unity
     guid: 3ba8a3fe029bcc348b2dffebc5cd4b6e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 8df4013ca8e9f154890edb93098364a2, type: 3}
