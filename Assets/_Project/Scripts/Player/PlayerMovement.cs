@@ -4,28 +4,25 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] private AudioClip stepsClip;
+    [SerializeField] private AudioClip[] stepsClips;
     [SerializeField] private float stepsVolume = 1f;
+    [SerializeField] private float stepsInterval = 0f;
+    [SerializeField] private bool stepsRandom = false;
 
     private InputAction moveAction;
-    private AudioSource stepsSource;
+    private float stepsTimer;
+    private int stepsIndex;
 
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Player/Move");
-
-        stepsSource = gameObject.AddComponent<AudioSource>();
-        stepsSource.clip = stepsClip;
-        stepsSource.volume = stepsVolume;
-        stepsSource.loop = true;
-        stepsSource.playOnAwake = false;
     }
 
     private void Update()
     {
         if (VentanaMinijuego.EstaAbierta)
         {
-            ActualizarPasos(false);
+            stepsTimer = 0f;
             return;
         }
 
@@ -40,13 +37,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void ActualizarPasos(bool caminando)
     {
-        if (caminando && !stepsSource.isPlaying)
+        if (!caminando)
         {
-            stepsSource.Play();
+            stepsTimer = 0f;
+            return;
         }
-        else if (!caminando && stepsSource.isPlaying)
+
+        stepsTimer -= Time.deltaTime;
+
+        if (stepsTimer <= 0f)
         {
-            stepsSource.Stop();
+            if (stepsRandom)
+            {
+                SFXManager.instance.PlayRandomSFXClip(stepsClips, transform, stepsVolume);
+            }
+            else
+            {
+                SFXManager.instance.PlaySFXClip(stepsClips[stepsIndex], transform, stepsVolume);
+                stepsIndex = (stepsIndex + 1) % stepsClips.Length;
+            }
+
+            stepsTimer = stepsInterval > 0f ? stepsInterval : stepsClips[0].length;
         }
     }
 }

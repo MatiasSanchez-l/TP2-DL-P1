@@ -137,5 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  stepsClip: {fileID: 8300000, guid: 9ff4fe6b109c974468f8ce941109bd86, type: 3}
+  stepsClips:
+  - {fileID: 8300000, guid: 8464e1d1af11c3b48b5c144b1e5ba550, type: 3}
+  - {fileID: 8300000, guid: 4d405739025e44e4d89891b33872ad9f, type: 3}
+  - {fileID: 8300000, guid: cd63315d2ce2d584690abcd172993093, type: 3}
   stepsVolume: 1
+  stepsInterval: 0.35
+  stepsRandom: 0
